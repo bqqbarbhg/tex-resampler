@@ -1,4 +1,3 @@
-#include "ext/rh_hash.h"
 #include "ext/ufbx.h"
 #include "ext/rtk.h"
 #include "ext/stb_image.h"
@@ -211,13 +210,7 @@ int main(int argc, char **argv)
 
 	if (showHelp) {
 		printf("%s",
-			"Usage: sf-model -i <input> -o <output> --mesh p3f:n3f:u2f [options]\n"
-			"    -i / --input <path>: Input texture filename in any format stb_image supports\n"
-			"    -o / --output <path>: Resulting resampled texture path\n"
-			"    -s / --source <path>: Mesh that the original texture is specified on\n"
-			"    -d / --destination <path>: Mesh to reproject the texture onto\n"
-			"    -j / --threads <num>: Number of threads to use\n"
-			"    -v / --verbose: Verbose output\n"
+			"Usage: tex-resampler -i <input> -o <output> -s <source-mesh> -d <destination-mesh>\n"
 		);
 
 		return 0;
